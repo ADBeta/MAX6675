@@ -1,7 +1,8 @@
 #include "Arduino.h"
 #include "MAX6675.h"
 
-void MAX6675::init(uint8_t v_SCK, uint8_t v_CS, uint8_t v_SO) { //Req. SCK CS SO
+//Initilaise the MAX6675. SCK CS SO
+MAX6675::MAX6675(uint8_t v_SCK, uint8_t v_CS, uint8_t v_SO) {
 	//Set global pinouts
 	_SCK = v_SCK;
 	_CS = v_CS;

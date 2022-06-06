@@ -3,8 +3,8 @@
  *	well as a fast function that doesn't work with floats. ideal for low power
  *	ICs like ATTinys'. 
  *
- *	Version 2.0.5
- *	ADBeta 01 May 2022
+ *	Version 3.5.0
+ *	ADBeta 06 Jun 2022
  
 	Notes:
 		CS > LOW to start read
@@ -27,7 +27,8 @@ class MAX6675 {
 	bool SAFETY_DELAY = false;
 	
 	/* Functions */
-	void init(uint8_t, uint8_t, uint8_t); //Initialises the sensor. SCK CS SO	
+	//Initilaise the MAX6675. SCK CS SO
+	MAX6675(uint8_t, uint8_t, uint8_t);	
 	
 	uint16_t getData(); //Gets raw 16bit data from the MAX6675
 	
